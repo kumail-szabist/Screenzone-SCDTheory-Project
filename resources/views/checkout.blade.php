@@ -23,7 +23,9 @@
       <hr>
       <p style="font-size:18px;"><strong>Total Amount:</strong> Rs <span id="grand-total">{{ request('total') ?? 500 }}</span></p>
       <button id="confirm-btn" style="background:gold; color:#000; padding:10px 20px; border:none; border-radius:6px; cursor:pointer; width:100%;">Confirm Booking</button>
+    <br><br><br><br>
     </div>
+    
 
     <!-- RIGHT: Add Snacks -->
     <div style="flex:1; min-width:300px; background:#111; padding:20px; border-radius:10px;">
@@ -51,7 +53,6 @@
   const snackSummary = document.getElementById('snack-summary');
   let total = ticketPrice;
 
-  // Update total dynamically when snacks are selected
   snackBoxes.forEach(cb => {
     cb.addEventListener('change', () => {
       let snackTotal = 0;
